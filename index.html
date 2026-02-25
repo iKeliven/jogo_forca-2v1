@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo da Palavra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎮 DESCUBRA A PALAVRA</h1>
+
+    <!-- Área da palavra secreta -->
+    <div id="areaSegredo">
+        <label for="segredo" class="label-segredo">
+            Digite a palavra secreta:
+        </label>
+        <br><br>
+        <input type="password" id="segredo">
+        <button onclick="iniciarOJogo()">Começar</button>
+    </div>
+
+    <!-- Área do jogo -->
+    <div id="areaJogo" class="hidden">
+
+        <p id="painel"></p>
+
+        <div class="input-area">
+            <input type="text" id="tentativa" maxlength="1" placeholder="Letra">
+            <button onclick="verificarLetra()">Enviar</button>
+        </div>
+
+        <div class="info">
+            <p>Tentativas restantes: <span id="tentativasRestantes"></span></p>
+            <p>Pontuação: <span id="pontuacao">0</span></p>
+            <p>Letras erradas: <span id="erradas"></span></p>
+        </div>
+
+        <p class="titulo-erros">Erros:</p>
+
+        <div class="barra-container">
+            <div id="barraErro" class="barra"></div>
+        </div>
+
+        <div id="linhaErros" class="linha-erros"></div>
+
+        <button id="reset" onclick="reiniciarJogo()" class="hidden">
+            Reiniciar
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
